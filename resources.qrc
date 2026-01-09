@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/plugins/my_qgis_plugin" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
+

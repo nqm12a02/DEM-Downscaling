@@ -1,0 +1,23 @@
+[general]
+name=DEM Downscaling
+qgisMinimumVersion=3.0
+description=Plugin to increase DEM resolution using Hopfield Neural Network method with spatial dependence maximization and elevation constraints. Features vectorized tensor operations and optional GPU acceleration for fast processing of large DEMs.
+about=This plugin implements the DEM downscaling algorithm based on the Hopfield Neural Network method presented in "Downscaling Gridded DEMs Using the Hopfield Neural Network" by Nguyen Quang Minh et al. (IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, Volume 12, Issue 11, pp. 4426-4437, 2019, DOI: 10.1109/IGARSS.2019.8932562). The algorithm increases DEM resolution by combining spatial dependence maximization with elevation constraints. The plugin supports resolution enhancement with zoom factors from 2x to 10x. Optional GPU acceleration using CuPy is available for faster processing.
+version=1.0.0
+author=Nguyen Quang Minh, Aisees Solutions
+email=ng.q.minh@gmail.com
+icon=icon.png
+tags=dem,downscaling,elevation,resolution,terrain,hopfield neural network,increasing dem resolution
+category=Raster
+homepage=https://ieeexplore.ieee.org/document/8932562
+repository=https://ieeexplore.ieee.org/document/8932562
+tracker=https://ieeexplore.ieee.org/document/8932562
+experimental=false
+deprecated=false
+license=GPLv2
+
+[pyqgis]
+# The name of the main plugin class
+class=MyQGISPlugin
+# The module name (python import path)
+module=my_qgis_plugin

@@ -1,0 +1,81 @@
+============================================================
+INSTRUCTIONS: Install CuPy for DEM Downscaling Plugin
+============================================================
+
+You have CUDA Toolkit 13.0 installed. CuPy may not have 
+official support for CUDA 13.0 yet, but we can try 
+cupy-cuda12x which might work with CUDA 13.0 driver.
+
+============================================================
+STEP 1: Open Command Prompt (NOT QGIS Python Console!)
+============================================================
+
+- Press Win + R
+- Type: cmd
+- Press Enter
+
+============================================================
+STEP 2: Navigate to plugin directory
+============================================================
+
+cd C:\Minh\DEM_Downscaling
+
+============================================================
+STEP 3: Install CuPy
+============================================================
+
+Run this command:
+
+"C:\Program Files\QGIS 3.40.13\bin\python-qgis-ltr.bat" -m pip install cupy-cuda12x
+
+NOTE: Replace the QGIS path if yours is different!
+
+============================================================
+STEP 4: Wait for installation
+============================================================
+
+- This may take 5-15 minutes
+- Downloads ~500 MB
+- Wait until you see "Successfully installed cupy-..."
+
+============================================================
+STEP 5: Verify installation
+============================================================
+
+Run diagnostic again:
+
+cd C:\Minh\DEM_Downscaling
+python check_gpu_cuda.py
+
+Expected result:
+[OK] CuPy is installed
+[OK] CUDA is available in CuPy
+[OK] GPU test successful
+
+============================================================
+STEP 6: Restart QGIS
+============================================================
+
+1. Close QGIS completely
+2. Reopen QGIS
+3. Open DEM Downscaling plugin
+4. Check status - should show "GPU Available"
+
+============================================================
+TROUBLESHOOTING
+============================================================
+
+If installation fails:
+
+1. Try alternative CuPy version:
+   python -m pip install cupy-cuda11x
+
+2. Check internet connection
+
+3. Use CPU processing instead:
+   python -m pip install scipy
+   
+   (Plugin will use CPU, still 10-100x faster than without)
+
+============================================================
+
